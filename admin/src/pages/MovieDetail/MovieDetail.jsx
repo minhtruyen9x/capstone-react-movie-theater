@@ -94,7 +94,7 @@ const MovieDetail = () => {
                             <Button solid className={styles.editBtn} onClick={() => setIsOpenEditForm(!isOpenEditForm)}>Edit</Button>
                             <Button solid className={styles.scheduleBtn} onClick={() => setIsOpenScheduleForm(!isOpenScheduleForm)}>Schedule</Button>
                             <Button solid className={styles.deleteBtn} onClick={handleDelete}>Delete</Button>
-                            <Grid xs={12} md={4} display='flex' alignItems="center" justifyContent="center">
+                            <Grid xs={12} md={4} display='flex' alignItems="flex-start" justifyContent="center">
                                 <div className={styles.image}>
                                     <img src={selectedMovie.hinhAnh} alt="" />
                                 </div>

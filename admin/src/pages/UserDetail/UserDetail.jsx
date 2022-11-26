@@ -91,7 +91,7 @@ const UserDetail = () => {
                         <Grid container spacing={2}>
                             <Button solid className={styles.editBtn} onClick={() => setIsOpen(!isOpen)}>Edit</Button>
                             <Button solid className={styles.deleteBtn} onClick={handleDelete}>Delete</Button>
-                            <Grid xs={12} md={4} display='flex' alignItems="center" justifyContent="center">
+                            <Grid xs={12} md={4} display='flex' alignItems="flex-start" justifyContent="center">
                                 <div className={styles.avatar}>
                                     <img src={selectedUser.hinhAnh || avatarDefault} alt="" />
                                 </div>
