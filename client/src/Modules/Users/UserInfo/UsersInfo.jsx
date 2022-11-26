@@ -89,15 +89,15 @@ const UsersInfo = () => {
                 required: {
                   value: true,
                   message: "Mật khẩu không được để trống",
-                },
-                minLength: {
-                  value: 4,
-                  message: "Mật khẩu phải từ 4 đến 8 ký tự",
-                },
-                maxLength: {
-                  value: 8,
-                  message: "Mật khẩu phải từ 4 đến 8 ký tự",
-                },
+                }
+                // minLength: {
+                //   value: 4,
+                //   message: "Mật khẩu phải từ 4 đến 8 ký tự",
+                // },
+                // maxLength: {
+                //   value: 8,
+                //   message: "Mật khẩu phải từ 4 đến 8 ký tự",
+                // },
               }}
               render={({ field, fieldState: { error } }) => (
                 <TextField
@@ -173,7 +173,7 @@ const UsersInfo = () => {
         </Row>
         <Button
           block
-          className="reg-button"
+          className="update-button"
           type="primary"
           htmlType="submit"
           disabled={isloading}

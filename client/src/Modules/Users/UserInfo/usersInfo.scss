@@ -13,6 +13,10 @@
   color: aliceblue;
 }
 
+.update-button {
+  margin-top: 30px;
+}
+
 @media screen and (max-width: 992px) {
   .user_update .ant-form {
     font-size: 16px;
@@ -34,10 +38,10 @@
 }
 
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
   .user_update .user_title {
     font-size: 18px;
-			font-weight: 700;
+    font-weight: 700;
   }
 
   .user_update .ant-form {
