@@ -35,8 +35,8 @@ const Login = () => {
     }
 
     const getRootAccount = () => {
-        setValue("taiKhoan", "anonymous00")
-        setValue("matKhau", "anonymous00")
+        setValue("taiKhoan", process.env?.ADMIN_ACCOUNT || "anonymous00")
+        setValue("matKhau", process.env?.ADMIN_PASSWORD || "anonymous00")
     }
 
     if (user) {

@@ -81,15 +81,7 @@ const Login = () => {
                 required: {
                   value: true,
                   message: "Vui lòng nhập mật khẩu",
-                },
-                minLength: {
-                  value: 5,
-                  message: "Mật khẩu phải từ 5 đến 10 ký tự",
-                },
-                maxLength: {
-                  value: 10,
-                  message: "Mật khẩu phải từ 5 đến 10 ký tự",
-                },
+                }
               }}
 
               render={({ field, fieldState: { error } }) => (
