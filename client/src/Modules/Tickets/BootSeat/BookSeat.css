@@ -1,0 +1,219 @@
+.booking {
+  max-width: 90%;
+  margin: 10px auto 0;
+}
+
+.booking .booking-bg {
+  border-bottom: 15px solid rgb(108, 104, 104);
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  width: 100%;
+  box-shadow: 0px 20px 35px rgb(226, 30, 8);
+}
+
+.booking .booking-seats {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.booking .booking-seats .booking-seat {
+  width: 32px;
+  height: 32px;
+  margin: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  outline: none;
+  font-weight: 500;
+  background: rgb(141, 141, 141);
+  color: #eee;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.booking .booking-seats .booking-seat:hover {
+  opacity: 0.8;
+}
+
+.booking .booking-seats .booking-vip {
+  background: rgb(240, 164, 0);
+  color: #555;
+}
+
+.booking .booking-seats .booking-booked {
+  width: 32px;
+  height: 32px;
+  margin: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  outline: none;
+  font-weight: 500;
+  background: red;
+  color: #eee;
+  cursor: not-allowed !important;
+}
+
+.booking .booking-seats .booking-checked {
+  background: rgb(56, 235, 16);
+  color: #555;
+}
+
+.booking .booking-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking .booking-sub .booked,
+.vip,
+.regular,
+.checked {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  outline: none;
+  font-weight: 500;
+  margin: 20px 20px 0;
+}
+
+.booking .booking-sub .booked {
+  background: red;
+  line-height: 32px;
+  text-align: center;
+  color: #eee;
+}
+
+.booking .booking-sub .vip {
+  background: rgb(240, 164, 0);
+}
+
+.booking .booking-sub .regular {
+  background: rgb(141, 141, 141);
+}
+
+.booking .booking-sub .checked {
+  background: rgb(56, 235, 16);
+}
+
+.booking .booking-sub .title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #777;
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 992px) {
+  .booking {
+    max-width: 100%;
+  }
+
+  .booking .booking-seats .booking-seat {
+    margin: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    background: gray;
+    color: #eee;
+  }
+
+  .booking .booking-seats .booking-vip {
+    background: rgb(222, 222, 52);
+    color: #555;
+  }
+
+
+
+  .booking .booking-seats .booking-checked {
+    background: rgb(56, 235, 16);
+  }
+
+  .booking .booking-seats .booking-booked {
+    margin: 2px;
+    outline: none;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .booking .booking-seats .booking-seat {
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .booking .booking-seats .booking-booked {
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .booking {
+    overflow: hidden;
+  }
+
+  .booking .booking-seats {
+    overflow-x: scroll;
+  }
+
+  .booking .booking-seats::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #d6cfcf;
+  }
+
+  .booking .booking-seats::-webkit-scrollbar {
+    height: 8px;
+    background-color: #f5f5f5;
+  }
+
+  .booking .booking-seats::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: block;
+  }
+
+  .booking .booking-seats .booking-list {
+    margin-bottom: 30px;
+  }
+
+  .booking .booking-seats .booking-list .booking-seats {
+    font-weight: 500;
+  }
+
+  .booking .booking-seats .booking-list .booking-booked {
+    font-weight: 500;
+  }
+
+  .booking .booking-sub .booked,
+  .vip,
+  .regular,
+  .checked {
+    width: 30px;
+    height: 30px;
+  }
+
+  .booking .booking-sub .booked {
+    line-height: 30px;
+  }
+
+  .booking .booking-sub .title {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .booking .booking-seats .booking-seat {
+    width: 48px;
+    height: 32px;
+    margin: 1px;
+  }
+}

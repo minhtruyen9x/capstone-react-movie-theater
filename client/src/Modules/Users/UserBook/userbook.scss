@@ -1,0 +1,18 @@
+.user-history .user-history-title {
+  font-size: 25px;
+  color: red;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .user-history .user-history-title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .user-history .user-history-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,26 @@
+.ticket {
+    margin: 64px 0 0;
+}
+
+.ticket .ticket-main {
+    display: flex;
+}
+
+.ticket .ticket-main .ticket-seat-list {
+    flex: 2;
+}
+
+.ticket .ticket-main .ticket-booking {
+    flex: 1;
+}
+
+@media screen and (max-width: 1200px) {
+    .ticket .ticket-main {
+        flex-direction: column;
+    }
+
+    .ticket .ticket-main .ticket-seat-list {
+        margin-bottom: 30px;
+    }
+
+}

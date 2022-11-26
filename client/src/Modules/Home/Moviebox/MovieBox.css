@@ -1,0 +1,309 @@
+.cinemax {
+  max-width: 1000px;
+  margin: 100px auto;
+}
+
+.cinemax .cinema-system-mobile {
+  display: none;
+}
+
+.cinemax .cinemax_box {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-height: 1000px;
+  overflow: hidden;
+}
+
+.cinemax .cinemax_box .logoCine {
+  height: 100px;
+  line-height: 100px;
+}
+
+.cinemax .cinemax_box .cine-info {
+  text-align: left;
+  white-space: normal;
+  width: 300px;
+  height: 100px;
+}
+
+.cinemax .cinemax_box .cine-info .cine-name,
+.cine-address,
+.cine-detail {
+  margin-bottom: 0;
+}
+
+.cinemax .cinemax_box .cine-info .cine-name {
+  color: rgb(198, 9, 9);
+  font-size: 18px;
+}
+
+.cinemax .cinemax_box .cine-info .cine-address {
+  color: rgb(171, 121, 103);
+  margin: 2px 0;
+}
+
+.cinemax .cinemax_box .cine-info .cine-detail {
+  color: cornsilk;
+}
+
+.cinemax .cinemax_box .cine-srcoll {
+  height: 900px;
+  overflow-y: scroll;
+}
+
+.cinemax .cinemax_box .cine-srcoll::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.cinemax .cinemax_box .cine-srcoll::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+.cinemax .cinemax_box .cine-srcoll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.cinemax .cinemax_box .cine-srcoll:hover::-webkit-scrollbar-thumb {
+  display: block;
+}
+
+.cinemax .cinemax_box .cine-flim {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+}
+
+.cinemax .cinemax_box .cine-flim .cine-title {
+  margin-left: 20px;
+}
+
+.cinemax .cinemax_box .cine-flim .cine-title h1 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+  color: red;
+}
+
+.cinemax .cinemax_box .cine-flim .cine-title h1 .cine-sub {
+  background: red;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 4px 5px;
+}
+
+.cinemax .cinemax_box .cine-flim .cine-title .cine-date {
+  margin: 5px 10px 10px 0;
+  padding: 5px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  border-radius: 4px;
+  color: green;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.cinemax .cinemax_box .cine-flim .cine-title .cine-date:hover {
+  opacity: 1;
+}
+
+.ant-tabs-tab {
+  margin-top: 0 !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.ant-tabs-tab:hover {
+  color: unset;
+}
+
+.ant-tabs-nav-list {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #363636 !important;
+  font-weight: 500;
+}
+
+.ant-tabs-tabpane {
+  padding-left: 0 !important;
+}
+
+.ant-tabs-ink-bar {
+  position: absolute;
+  background: red;
+  pointer-events: none;
+}
+
+.cinema-scroll {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.cinemax_box .ant-tabs {
+  max-height: 400px;
+}
+
+.cinemax_box .ant-tabs-content {
+  height: 100%;
+}
+
+.cinemax .cinemax_box .cine-info {
+  text-align: left;
+  white-space: normal;
+  width: auto;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.cinemax_box .ant-tabs-nav {
+  max-width: 50%;
+}
+
+.cinemax_box .ant-tabs-nav-more {
+  display: none;
+}
+
+.cinemax_box .ant-collapse {
+  background-color: rgb(18, 17, 17);
+}
+
+.cinemax_box .ant-collapse-content {
+  background-color: #000;
+}
+
+@media screen and (max-width: 992px) {
+  .cinemax {
+    max-width: 800px;
+  }
+
+  .cinemax .cine-info .cine-name {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  .cinemax .cine-date {
+    font-size: 12px !important;
+  }
+
+  .cinemax .ant-tabs-tab {
+    padding: 8px 10px !important;
+    max-height: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cinemax {
+    max-width: 550px;
+  }
+
+
+  .cinemax .cinemax_box .cine-info .cine-name {
+    font-size: 14px;
+    margin-top: auto;
+  }
+
+  .cinemax .cinemax_box .cine-flim .cine-img {
+    height: 80px;
+    width: 50%;
+  }
+
+  .cinemax .cine-srcoll::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #dbd8d8 !important;
+  }
+
+  .cinemax .cine-srcoll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: block !important;
+  }
+
+  .cinemax .cine-srcoll .cine-flim {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px dotted #000;
+  }
+
+  .cinemax .cine-srcoll .cine-flim .cine-title {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .cinemax .tab-info .ant-tabs-nav {
+    width: 200px;
+  }
+
+  .cinemax .tab-info .ant-tabs-nav .cine-info {
+    width: 100%;
+  }
+
+  .cinemax .tab-info .ant-tabs-nav .cine-info .cine-address {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cinemax {
+    margin: 0 10px 50px;
+  }
+
+  .cinemax .cinemax_box {
+    display: none;
+  }
+
+  .cinemax .cinema-system-mobile {
+    display: block;
+    height: auto;
+    background: #000;
+  }
+
+  .cinemax .cinema-system-mobile .ant-collapse>.ant-collapse-item>.ant-collapse-header {
+    line-height: 2;
+  }
+
+  .cinemax .cinema-system-mobile .cinema-info-mobile .cinema-name-mobile {
+    font-size: 16px;
+    color: rgb(54, 9, 232);
+    margin-bottom: 5px;
+  }
+
+  .cinemax .cinema-system-mobile .cinema-info-mobile .cinema-address-mobile {
+    margin-bottom: 5px;
+    color: rgb(228, 228, 7);
+  }
+
+  .cinemax .cinema-system-mobile .cinema-info-mobile .cinema-detail-mobile {
+    color: red;
+  }
+
+  .cinemax .cinema-system-mobile .name-film-mobile {
+    margin-bottom: 5px;
+    color: red;
+    font-weight: 500;
+  }
+
+  .cinemax .cinema-system-mobile .cinema-date-mobile {
+    margin-bottom: 8px;
+    margin-right: 8px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: orange;
+    color: #eee;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

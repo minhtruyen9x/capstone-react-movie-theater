@@ -1,0 +1,336 @@
+.OverView {
+  position: relative;
+  margin-top: 64px;
+}
+
+.OverView .OverView-backgroud {
+  width: 100%;
+  height: 100vh;
+  filter: brightness(30%) blur(2px);
+}
+
+.OverView .OverView-flim {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  margin: 0 150px;
+}
+
+.OverView .OverView-flim .OverView-title {
+  display: flex;
+  flex: 3;
+}
+
+.OverView .OverView-flim .OverView-title .OverView-imgs {
+  border-radius: 10px;
+}
+
+.OverView .OverView-flim .OverView-title .OverView-imgs img {
+  box-shadow: rgba(24, 22, 22, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+
+.OverView .OverView-flim .OverView-title .OverView-imgs .start-img-mobile {
+  display: none;
+}
+
+.OverView .OverView-flim .OverView-title .OverView-info {
+  margin-left: 20px;
+}
+
+.OverView .OverView-flim .OverView-title .OverView-info .OverView-showing {
+  color: rgb(229, 236, 15);
+  font-size: 20px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.OverView .OverView-flim .OverView-title .OverView-info .OverView-coming-soon {
+  color: rgb(188, 218, 15);
+  font-size: 20px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.OverView .OverView-flim .OverView-title .OverView-info .OverView-name {
+  margin: 10px 0;
+  font-size: 25px;
+  color: rgb(255, 64, 0);
+}
+
+.OverView .OverView-flim .OverView-title .OverView-info .OverView-scroll {
+  margin-top: 15px;
+  padding-right: 10px;
+  overflow-y: scroll;
+}
+
+.OverView
+  .OverView-flim
+  .OverView-title
+  .OverView-info
+  .OverView-srcoll::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.OverView
+  .OverView-flim
+  .OverView-title
+  .OverView-info
+  .OverView-scroll::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+.OverView
+  .OverView-flim
+  .OverView-title
+  .OverView-info
+  .OverView-scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(243, 255, 255);
+  display: none;
+}
+
+.OverView
+  .OverView-flim
+  .OverView-title
+  .OverView-info,
+  .OverView-scroll:hover::-webkit-scrollbar-thumb {
+  display: block;
+}
+
+.OverView .OverView-flim .OverView-title .OverView-info .OverView-scroll,
+.OverView-sub {
+  color: rgb(238, 228, 228);
+  text-align: justify;
+  font-weight: 500;
+  line-height: 1.8em;
+  max-height: 300px;
+}
+
+.OverView .OverView-flim .OverView-title .OverView-info .OverView-scroll,
+.OverView-ticket {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 40px;
+  color: rgb(217, 23, 23);
+  background: rgb(12, 12, 12);
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.OverView .OverView-flim .OverView-title .OverView-info .OverView-scroll,
+.OverView-ticket:hover {
+  color: rgb(233, 199, 7);
+}
+.OverView .OverView-flim .OverView-rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 2;
+  align-items: center;
+}
+
+.OverView .OverView-flim .OverView-rating .OverView-progress {
+  margin-bottom: 50px;
+}
+
+.OverView .OverView-flim .OverView-rating .OverView-progress .OverView-percent {
+  color: #eee;
+  font-size: 35px;
+  font-weight: 500;
+  transition-duration: 0.2s;
+  transition-property: all;
+  transition-timing-function: ease-out;
+}
+.OverView
+  .OverView-flim
+  .OverView-rating
+  .OverView-progress
+  .OverView-percent:hover {
+  cursor: default;
+  color: rgb(255, 64, 0);
+  font-size: 50px;
+}
+
+.OverView .OverView-flim .OverView-rating .OverView-start .start-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .OverView .OverView-flim {
+    margin: 0 50px;
+  }
+  .OverView .OverView-flim .OverView-title {
+    flex: 2;
+  }
+
+  .OverView .OverView-flim .OverView-title .OverView-imgs img {
+    width: 200px;
+    height: 300px;
+  }
+
+  .OverView
+    .OverView-flim
+    .OverView-title
+    .OverView-info,
+    .OverView-scroll::-webkit-scrollbar-thumb {
+    display: block;
+  }
+
+  .OverView .OverView-flim .OverView-rating {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .OverView .OverView-flim .OverView-title .OverView-info .OverView-showing {
+    font-size: 15px;
+  }
+
+  .OverView
+    .OverView-flim
+    .OverView-title
+    .OverView-info,
+    .OverView-coming-soon {
+    font-size: 15px;
+  }
+
+  .OverView .OverView-flim .OverView-title .OverView-info .OverView-name {
+    font-size: 20px;
+  }
+
+  .OverView .OverView-flim .OverView-title .OverView-info .OverView-scroll,
+  .OverView-sub {
+    line-height: 1.6em;
+    font-size: 15px;
+    font-weight: 400;
+    height: 200px;
+  }
+
+  .OverView .OverView-flim .OverView-title .OverView-info .OverView-ticket {
+    padding: 5px 30px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .OverView .OverView-flim .OverView-rating .OverView-start .start-desktop {
+    display: none;
+  }
+
+  .OverView .OverView-flim .OverView-rating .OverView-start .start-mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .OverView .OverView-flim {
+    flex-wrap: wrap;
+  }
+
+  .OverView .OverView-flim .OverView-title {
+    flex-direction: column;
+  }
+  .OverView .OverView-flim .OverView-title .OverView-imgs img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .OverView .OverView-flim .OverView-title .OverView-info {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .OverView .OverView-flim .OverView-title .OverView-info .OverView-scroll
+  .OverView-sub {
+    height: 100px;
+  }
+
+  .OverView .OverView-flim .OverView-title .OverView-info .OverView-ticket {
+    margin-top: 20px;
+    padding: 5px 20px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .OverView .OverView-flim {
+    flex-direction: column;
+  }
+
+  .OverView .OverView-flim .OverView-title {
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+
+  .OverView .OverView-flim .OverView-title .OverView-info {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  .OverView .OverView-flim .OverView-rating .OverView-progress {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .OverView .OverView-backgroud {
+    height: 50vh;
+  }
+
+  .OverView .OverView-flim .OverView-title {
+    margin-bottom: 0;
+  }
+  .OverView .OverView-flim .OverView-title .OverView-imgs img {
+    width: 100px;
+    height: 150px;
+  }
+  .OverView .OverView-flim .OverView-title .OverView-imgs .start-img-mobile {
+    display: block;
+    margin-top: 15px;
+    font-size: 12px;
+  }
+
+  .OverView .OverView-flim .OverView-title .OverView-info .OverView-showing {
+    font-size: 12px;
+  }
+
+  .OverView
+    .OverView-flim
+    .OverView-title
+    .OverView-info
+    .OverView-coming-soon {
+    font-size: 12px;
+  }
+  .OverView .OverView-flim .OverView-title .OverView-info .OverView-name {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .OverView
+    .OverView-flim
+    .OverView-title
+    .OverView-info
+    .OverView-scroll
+    .OverView-sub {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .OverView .OverView-flim .OverView-rating {
+    display: none;
+  }
+}

@@ -1,0 +1,51 @@
+.user_update {
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.user_update .user_title {
+  font-size: 25px;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.user_update .form-group .form-label {
+  color: aliceblue;
+}
+
+@media screen and (max-width: 992px) {
+  .user_update .ant-form {
+    font-size: 16px;
+  }
+
+  .user_update .ant-form input {
+    padding: 5px 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .user_update .user_title {
+    font-size: 20px;
+  }
+
+  .user_update .ant-form label {
+    font-weight: 500;
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .user_update .user_title {
+    font-size: 18px;
+			font-weight: 700;
+  }
+
+  .user_update .ant-form {
+    font-size: 12px;
+  }
+
+  .user_update .ant-form input {
+    padding: 4px 5px;
+  }
+
+}

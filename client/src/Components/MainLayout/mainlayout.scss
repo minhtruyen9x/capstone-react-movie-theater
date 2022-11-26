@@ -1,0 +1,28 @@
+.Header {
+  background: linear-gradient(180deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, 0));
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+
+  @media (max-width: 992px) {
+    & {
+      padding: 0 16px;
+      background: #101010;
+    }
+  }
+}
+
+.Footer {
+  background-color: rgb(14, 14, 20);
+}
+
+.Content {
+  background-color: rgb(14, 14, 20);
+}
+
+.ant-layout-footer {
+  padding: 24px 20px !important;
+}

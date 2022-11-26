@@ -1,0 +1,132 @@
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.footer .footer_detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .footer_detail h1 {
+  color: #eee;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.footer .footer_detail .footer_item .hottline {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer .footer_detail .footer_item .hottline .footer_app {
+  color: rgb(233, 233, 233);
+  font-size: 30px;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.footer .footer_detail .footer_item .hottline .footer_app:hover {
+  color: blue;
+  transform: translateY(-10px);
+}
+
+.footer .footer_detail .faqItem a {
+  color: rgb(231, 231, 231);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer .footer_detail .faqItem a:hover {
+  color: rgb(12, 15, 214);
+}
+
+.footer .footer_detail .cinemaItem .cinemaList .images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .footer_detail .cinemaItem .cinemaList .images .theater {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+.footer .footer_detail .cinemaItem .cinemaList .images .theater img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.footer .footer_detail .cinemaItem .cinemaList .images .theater img:hover {
+  transform: translateY(-10px);
+}
+
+.footer .footer_detail .mobileItem .mobileApp {
+  display: flex;
+}
+
+.footer .footer_detail .mobileItem .mobileApp .store {
+  color: rgb(236, 233, 233);
+  text-decoration: none;
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.footer .footer_detail .mobileItem .mobileApp .store:hover {
+  color: rgb(12, 15, 214);
+}
+
+@media screen and (max-width: 992px) {
+  .footer .footer_detail h1 {
+    font-size: 16px;
+  }
+
+  .footer .footer_detail .cinemaItem .cinemaList .images {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer .footer_detail .mobileItem .mobileApp .store {
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer .footer_detail {
+    flex-wrap: wrap;
+  }
+
+  .footer .footer_detail .footer_item .faqItem .cinemaItem .mobileItem {
+    margin-bottom: 30px;
+
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer .footer_detail {
+    flex-direction: column;
+  }
+
+  .footer .footer_detail h1 {
+    margin-bottom: 15px;
+  }
+
+  .footer .footer_detail .cinemaItem .cinemaList {
+    justify-content: flex-start;
+  }
+}

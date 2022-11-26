@@ -1,0 +1,395 @@
+.showing {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.showing .show_flim .show_card {
+  width: 230px;
+  height: 320px;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: white;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.4s ease-out;
+  box-shadow: 0px 7px 10px rgba(black, 0.5);
+}
+
+.showing .show_flim .show_card:hover {
+  transform: translateY(-20px);
+}
+
+.showing .show_flim .show_card:hover::before {
+  opacity: 1;
+}
+
+.showing .show_flim .show_card:hover .show_info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.showing .show_flim .show_card:hover .icon_play {
+  display: block;
+}
+
+.showing .show_flim .show_card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: rgba(black, 0.6);
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.showing .show_flim .show_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+
+.showing .show_flim .show_card .show_info {
+  position: relative;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s;
+}
+
+.showing .show_flim .show_card .show_info p {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 8px;
+}
+.showing .show_flim .show_card .show_info button {
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background: black;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.showing .show_flim .show_card .show_info button:hover {
+  background: #fff;
+  color: rgb(81, 3, 3);
+}
+
+.showing .show_flim .show_card .icon_play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  border: none;
+  font-size: 60px;
+  display: none;
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.showing .show_flim .show_card .icon_play:hover {
+  opacity: 1;
+}
+
+.showing .show_flim .show_card .main .banner-overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+}
+
+.showing .show_flim .show_card .main .banner-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 450px;
+  background: #eee;
+  z-index: 99999;
+}
+
+.showing .show_flim .show_card .main .modal-close {
+  position: absolute;
+  top: 0;
+  left: 101%;
+}
+.showing .show_flim .show_card .main .modal-close button {
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showing .show_flim h2 {
+  margin: 15px 0 30px;
+  color: rgb(237, 235, 235);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6rem;
+}
+
+.showing .show_flim .movie_sub {
+  background: red;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 4px 5px;
+}
+
+.showing .show_flim .showing_btn_movie {
+  display: none;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: rgb(243, 0, 0);
+  color: rgb(24, 21, 21);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.showing .show_flim .showing_btn_movie:hover {
+  background: #fff;
+  color: #000;
+}
+
+.showing .swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+.showing .swiper-wrapper {
+  padding-top: 50px;
+}
+
+.showing .swiper-grid-column > .swiper-wrapper {
+  flex-direction: row !important;
+}
+.showing .swiper-slide {
+  margin-top: 0 !important;
+}
+
+.showing .swiper-pagination-bullet {
+  background: yellow;
+}
+.showing .swiper-pagination-bullet-active {
+  background: red;
+}
+
+.showing .showing_modal .showing_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.showing .video_trailer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+}
+
+.showing .video_trailer .showing_close_modal {
+  position: absolute;
+  top: -30px;
+  left: 100%;
+  border: 2px solid #eee;
+  outline: none;
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  color: #eee;
+  line-height: 15px;
+  opacity: 1;
+}
+
+.showing .video_trailer .showing_close_modal:hover {
+  opacity: 0.8;
+}
+
+@media screen and ( max-width: 992px) {
+  .showing .swiper {
+    padding: 0 0 30px;
+  }
+
+  .showing .show_flim .show_card {
+    width: 100%;
+  }
+
+  .showing .show_flim .show_card:hover {
+    transform: translateY(-20px);
+  }
+
+  .showing .show_flim .show_card:hover::before {
+    opacity: 1;
+  }
+
+  .showing .show_flim .show_card:hover .show_info {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  .showing .show_flim .show_card:hover .icon_play {
+    display: block;
+  }
+
+  .showing .show_flim h2 {
+    margin-bottom: 10px !important;
+    height: 50px;
+    font-size: 12px;
+  }
+
+  .showing .show_info {
+    display: none;
+  }
+
+  .showing .show_flim .showing_btn_movie {
+    display: block !important ;
+    margin-bottom: 20px;
+  }
+
+  .showing .swiper-slide {
+    padding: 0 30px !important;
+  }
+
+  .showing .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .showing .show_flim .show_card {
+    height: 350px;
+  }
+
+  .showing .show_flim .show_card .showing_btn_movie {
+    margin-bottom: 30px;
+  }
+
+  .showing .show_flim h1 {
+    font-size: 14px;
+  }
+
+  .showing .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    display: none;
+  }
+
+  .showing .swiper-button-prev,
+  .swiper-button-next {
+    display: block;
+  }
+
+  .showing .swiper-button-prev::after,
+  .swiper-button-next::after {
+    color: red;
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  .showing .showing_modal .video_trailer {
+    width: 400px;
+    height: 300px;
+  }
+
+  .showing .showing_modal .video_trailer div {
+    width: 400px !important;
+    height: 300px !important;
+  }
+
+  .showing .showing_modal .video_trailer div div {
+    width: 400px !important;
+    height: 300px !important;
+  }
+
+  .showing .showing_modal .video_trailer div div iframe {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .showing .swiper {
+    padding-bottom: 0;
+  }
+
+  .showing .show_flim h1 {
+    font-size: 12px;
+    height: unset;
+  }
+
+  .showing .swiper-slide {
+    padding: 0 100px !important;
+  }
+
+  .showing .showing_modal .video_trailer {
+    width: 300px;
+    height: 200px;
+  }
+
+  .showing .showing_modal .video_trailer .showing_close_modal {
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+  }
+
+  .showing .showing_modal .video_trailer .showing_close_modal div {
+    width: 300px !important;
+    height: 200px !important;
+  }
+
+  .showing .showing_modal .video_trailer .showing_close_modal div div {
+    width: 300px !important;
+    height: 200px !important;
+  }
+
+  .showing .showing_modal .video_trailer .showing_close_modal div div frame {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .showing .show_flim .show_card {
+    height: 250px;
+  }
+}
