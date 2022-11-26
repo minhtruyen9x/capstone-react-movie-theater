@@ -52,7 +52,7 @@ const Header = () => {
                             </span>
                             <a
                                 style={{ textDecoration: "none", fontWeight: "500" }}
-                                href={process.env?.ADMIN_URL || "#"}
+                                href={process.env?.REACT_APP_ADMIN_URL || "#"}
                             >
                                 Quản trị
                             </a>
