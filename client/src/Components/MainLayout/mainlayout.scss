@@ -1,5 +1,5 @@
 .Header {
-  background: linear-gradient(180deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, 0));
+  background: black;
   top: 0;
   left: 0;
   right: 0;
@@ -16,11 +16,11 @@
 }
 
 .Footer {
-  background-color: rgb(14, 14, 20);
+  background-color: black; //rgb(14, 14, 20);
 }
 
 .Content {
-  background-color: rgb(14, 14, 20);
+  background-color: rgb(29 29 29);
 }
 
 .ant-layout-footer {

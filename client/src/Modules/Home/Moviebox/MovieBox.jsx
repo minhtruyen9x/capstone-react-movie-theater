@@ -28,12 +28,12 @@ const MovieBox = () => {
                 label: (
                     <div className='cine-info'>
                         <h3 className='cine-name'>
-                            {cineComplex.tenCumRap}
+                            {cineComplex.tenCumRap.split("-")[0]}
+                            <span> - {cineComplex.tenCumRap.split("-")[1]}</span>
                         </h3>
                         <p className='cine-address'>
                             {cineComplex.diaChi}
                         </p>
-                        <span className='cine-detail'>Chi Tiết</span>
                     </div>
                 ),
                 key: index,
@@ -41,34 +41,35 @@ const MovieBox = () => {
                     cineComplex.danhSachPhim.map((flim, index) => {
                         return (
                             <div key={index} className="cine-flim">
-                                <div className='cine-img'>
-                                    <img
-                                        src={flim.hinhAnh}
-                                        alt={flim.maPhim}
-                                        width={100}
-                                        height={150}
-                                    />
-                                </div>
                                 <div className='cine-title'>
+                                    <div className='cine-img'>
+                                        <img
+                                            src={flim.hinhAnh}
+                                            alt={flim.maPhim}
+                                            width={100}
+                                            height={150}
+                                        />
+                                    </div>
                                     <h1>
+                                        {flim.tenPhim}
                                         {flim.hot && (
                                             <span className='cine-sub'>Hot</span>
                                         )}
-                                        {flim.tenPhim}
                                     </h1>
-                                    {flim.lstLichChieuTheoPhim
-                                        ?.slice(0, 4)
-                                        .map((showtimes, idx) => {
-                                            return (
-                                                <button
-                                                    key={idx}
-                                                    className="cine-date" onClick={() => navigate(`/ticket/${showtimes.maLichChieu}`)}
-                                                >
-                                                    {dayjs(showtimes.ngayChieuGioChieu).format("DD/MM/YYYY - hh:mm A")}
-                                                </button>
-                                            )
-                                        })}
+
                                 </div>
+                                {flim.lstLichChieuTheoPhim
+                                    ?.slice(0, 4)
+                                    .map((showtimes, idx) => {
+                                        return (
+                                            <button
+                                                key={idx}
+                                                className="cine-date" onClick={() => navigate(`/ticket/${showtimes.maLichChieu}`)}
+                                            >
+                                                {dayjs(showtimes.ngayChieuGioChieu).format("DD/MM/YYYY - hh:mm A")}
+                                            </button>
+                                        )
+                                    })}
                             </div>
                         )
                     }),
@@ -86,7 +87,6 @@ const MovieBox = () => {
             key: cinebox.maHeThongRap,
             children:
                 <Tabs
-                    className='cine-info'
                     defaultActiveKey='1'
                     tabPosition='left'
                     items={subItems}
@@ -98,7 +98,7 @@ const MovieBox = () => {
     return (
         <div id='cinemax' className='cinemax'>
             <div className='cinemax_box'>
-                <Tabs defaultActiveKey='1' tabPosition='left' items={items} />
+                <Tabs defaultActiveKey='1' tabPosition='left' items={items} className="cinemax_content" />
             </div>
             <div className="cinema-system-mobile">
                 <Collapse onChange={onChange}>

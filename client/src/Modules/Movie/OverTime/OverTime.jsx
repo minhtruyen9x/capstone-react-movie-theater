@@ -1,6 +1,8 @@
 import React from 'react'
 import { Rate, Progress } from 'antd'
 
+import Paragraph from "../../../Components/Paragraph"
+
 import useRequest from "../../../Hook/useRequest"
 import movieAPI from "../../../Services/movieAPI"
 
@@ -40,44 +42,45 @@ const OverTime = ({ movieId }) => {
                         ) : movie?.sapChieu ? (
                             <span className="OverView-coming-soon">Sắp Chiếu</span>
                         ) : null}
+                        <p className='OverView-time'>{movie?.ngayKhoiChieu.split("T")[0].replaceAll('-', ".")}</p>
                         <h3 className="OverView-name">{movie.tenPhim}</h3>
                         <div className="OverView-scroll">
-                            <p className="OverView-sub">{movie.moTa}</p>
+                            <Paragraph className="OverView-sub" maxCharacters={120}>{movie.moTa}</Paragraph>
                         </div>
                         <a href="#showtime" className="OverView-ticket">
                             Mua Vé
                         </a>
                     </div>
-                </div>
-                <div className="OverView-rating">
-                    <div className="OverView-progress">
-                        <Progress
-                            type="circle"
-                            strokeColor={{
-                                "0%": "#10e931",
-                                "50%": "#e1e107",
-                                "100%": "#ec0909"
-                            }}
-                            format={(percent) => (
-                                <span className="OverView-percent">{percent}%</span>
-                            )}
-                            percent={movie.danhGia * 10}
-                        />
-                    </div>
-                    <div className="OverView-start">
-                        <Rate
-                            className="start-desktop"
-                            count={5}
-                            defaultValue={movie.danhGia}
-                            disabled
-                        />
-                        <Rate
-                            className="start-mobile"
-                            allowHalf
-                            count={5}
-                            defaultValue={movie.danhGia / 2}
-                            disabled
-                        />
+                    <div className="OverView-rating">
+                        <div className="OverView-progress">
+                            <Progress
+                                type="circle"
+                                strokeColor={{
+                                    "0%": "#10e931",
+                                    "50%": "#e1e107",
+                                    "100%": "#ec0909"
+                                }}
+                                format={(percent) => (
+                                    <span className="OverView-percent">{percent}%</span>
+                                )}
+                                percent={movie.danhGia * 10}
+                            />
+                        </div>
+                        <div className="OverView-start">
+                            <Rate
+                                className="start-desktop"
+                                count={5}
+                                defaultValue={movie.danhGia}
+                                disabled
+                            />
+                            <Rate
+                                className="start-mobile"
+                                allowHalf
+                                count={5}
+                                defaultValue={movie.danhGia / 2}
+                                disabled
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
