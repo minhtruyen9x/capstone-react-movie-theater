@@ -109,11 +109,11 @@
 }
 
 .header-mobile {
+  display: none;
   background: #eee;
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
   flex-direction: column;
   width: 250px;
   height: 100vh;
@@ -215,6 +215,11 @@
 }
 
 @media screen and (max-width: 992px) {
+
+  .header-mobile {
+    display: flex;
+  }
+
   .header-logo {
     .menu-icon {
       display: block;

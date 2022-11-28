@@ -19,7 +19,8 @@ const Header = () => {
     const dispatch = useDispatch();
     const { user } = useSelector((state) => state.auth)
 
-    const handleLogout = () => {
+    const handleLogout = (evt) => {
+        evt.preventDefault()
         dispatch(logout());
         navigate("/")
     }
@@ -188,7 +189,7 @@ const Header = () => {
 
                 {user ? (
                     <div className="user-mobile">
-                        <Dropdown menu={{ items }} trigger={["click"]}>
+                        {/* <Dropdown menu={{ items }} trigger={["click"]}>
                             <div className="logout-mobile">
                                 <Avatar
                                     style={{
@@ -200,7 +201,34 @@ const Header = () => {
                                 <p className="name-mobile">{user.taiKhoan}</p>
                                 <DownOutlined style={{ color: "#999", fontSize: "18px" }} />
                             </div>
-                        </Dropdown>
+                        </Dropdown> */}
+                        <div className="auth-mobile">
+                            <div className="btn-mobile">
+                                <Link
+                                    to="/user"
+                                    style={{ textDecoration: "none", fontWeight: "500" }}
+                                >
+                                    Thông tin cá nhân
+                                </Link>
+                            </div>
+                            <div className="btn-mobile">
+                                <a
+                                    style={{ textDecoration: "none", fontWeight: "500" }}
+                                    href={process.env?.REACT_APP_ADMIN_URL || "#"}
+                                >
+                                    Quản trị
+                                </a>
+                            </div>
+                            <div className="btn-mobile">
+                                <a
+                                    style={{ textDecoration: "none", fontWeight: "500" }}
+                                    href="/"
+                                    onClick={handleLogout}
+                                >
+                                    Đăng xuất
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 ) : (
                     <div className="auth-mobile">
