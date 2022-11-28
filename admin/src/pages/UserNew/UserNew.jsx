@@ -31,7 +31,7 @@ const UserNew = () => {
             maLoaiNguoiDung: ""
         }
     })
-    console.log("reset")
+    // console.log("reset")
     const onSubmit = (values) => {
         createUser.runAsync(values)
             .then(() => {

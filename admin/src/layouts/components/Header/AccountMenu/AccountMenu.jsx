@@ -11,7 +11,7 @@ const AccountMenu = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const { user } = useSelector(state => state.auth)
-    console.log("AccountMenu route")
+    // console.log("AccountMenu route")
 
     const menu = [
         { title: "Profile", action: "get-profile" },

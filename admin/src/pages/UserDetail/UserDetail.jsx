@@ -52,29 +52,34 @@ const UserDetail = () => {
         {
             field: "maVe",
             headerName: "Ticket ID",
-            flex: 1
+            flex: 1,
+            minWidth: 120
         },
         {
             field: "tenPhim",
             headerName: "Movie Name",
-            flex: 2
+            flex: 2,
+            minWidth: 260
         },
         {
             field: "thoiLuongPhim",
             headerName: "Range",
             flex: 1,
+            minWidth: 80,
             valueGetter: (params) => params.row.thoiLuongPhim + "'"
         },
         {
             field: "giaVe",
             headerName: "Price",
             valueGetter: (params) => params.row?.giaVe?.toLocaleString("vn-VN") + ' VND',
-            flex: 1
+            flex: 1,
+            minWidth: 150
         },
         {
             field: "ngayDat",
             headerName: "Booking day",
-            flex: 2
+            flex: 2,
+            minWidth: 240
         }
     ];
 
@@ -129,7 +134,7 @@ const UserDetail = () => {
                         <TableData
                             rows={selectedUser.thongTinDatVe || []}
                             columns={columns}
-                            getRowId={(row) => selectedUser.taiKhoan}
+                            getRowId={(row) => row.maVe}
                             rowsPerPageOptions={[10]}
                             pageSize={10}
                             loading={loading}

@@ -146,7 +146,7 @@ const UserList = () => {
     const handleRowId = useCallback((row) => {
         return row.taiKhoan
     }, [])
-    console.log(users)
+    // console.log(users)
 
     return (
         <div className={styles.wrapper}>

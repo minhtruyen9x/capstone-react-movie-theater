@@ -147,7 +147,8 @@ const MovieList = () => {
         dispatch(getMovies(searchValue))
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchValue])
-    console.log(movies)
+
+    // console.log(movies)
     return (
         <div className={styles.wrapper}>
             <header className={styles.header}>

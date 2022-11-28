@@ -54,7 +54,8 @@ const MovieDetail = () => {
         {
             field: "maHeThongRap",
             headerName: "Center ID",
-            flex: 1
+            flex: 1,
+            minWidth: 100
         },
         {
             field: "tenHeThongRap",
@@ -65,12 +66,14 @@ const MovieDetail = () => {
                     <span>{params.row.tenHeThongRap}</span>
                 </div>
             ),
-            flex: 2
+            flex: 2,
+            minWidth: 200
         },
         {
             field: "heThongRapChieu",
             headerName: "Number of Schedule",
             flex: 1,
+            minWidth: 80,
             valueGetter: (params) => params.row.cumRapChieu.length
         }
     ];
