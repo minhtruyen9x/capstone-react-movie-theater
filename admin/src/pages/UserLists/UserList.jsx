@@ -96,26 +96,31 @@ const UserList = () => {
             field: "hoTen",
             headerName: "Fullname",
             flex: 2,
+            minWidth: 150
         },
         {
             field: "taiKhoan",
             headerName: "User",
             flex: 2,
+            minWidth: 150
         },
         {
             field: "email",
             headerName: "Email",
             flex: 2,
+            minWidth: 260
         },
         {
             field: "soDT",
             headerName: "Phone",
             flex: 2,
+            minWidth: 150
         },
         {
             field: "maLoaiNguoiDung",
             headerName: "Role",
             flex: 1,
+            minWidth: 150
         },
         {
             field: "action",
@@ -123,6 +128,7 @@ const UserList = () => {
             description: "Do more action with this",
             sortable: false,
             flex: 1,
+            minWidth: 80,
             renderCell: (params) => {
                 return (
                     <MoreMenu
@@ -146,7 +152,7 @@ const UserList = () => {
         <div className={styles.wrapper}>
             <header className={styles.header}>
                 <h2>Users</h2>
-                <div className={styles.control}>
+                <div className={styles.controlWrapper}>
                     <SearchBar
                         outline
                         placeholder="Find User"
@@ -154,16 +160,18 @@ const UserList = () => {
                         onChange={(e) => setSearchParams({ tuKhoa: e.target.value })}
                         onClearValue={() => setSearchParams()}
                     />
-                    <Button
-                        to='/admin/users/new'
-                        solid
-                        leftIcon={<AddOutlinedIcon />}
-                    >
-                        Add User
-                    </Button>
-                    <MoreMenu items={menu} placement='bottom-end'>
-                        <MoreVertOutlinedIcon fontSize='inherit' />
-                    </MoreMenu>
+                    <div className={styles.control}>
+                        <Button
+                            to='/admin/users/new'
+                            solid
+                            leftIcon={<AddOutlinedIcon />}
+                        >
+                            Add User
+                        </Button>
+                        <MoreMenu items={menu} placement='bottom-end'>
+                            <MoreVertOutlinedIcon fontSize='inherit' />
+                        </MoreMenu>
+                    </div>
                 </div>
             </header>
             <TableData

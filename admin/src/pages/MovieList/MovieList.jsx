@@ -99,6 +99,7 @@ const MovieList = () => {
             field: "hinhAnh",
             headerName: "Image",
             flex: 2,
+            minWidth: 80,
             renderCell: (params) => {
                 return (<img src={params.value} className={styles.movieImg} alt="" />)
             }
@@ -107,17 +108,20 @@ const MovieList = () => {
             field: "tenPhim",
             headerName: "Name",
             flex: 4,
+            minWidth: 200
         },
 
         {
             field: "moTa",
             headerName: "Desciption",
             flex: 4,
+            minWidth: 260
         },
         {
             field: "ngayKhoiChieu",
             headerName: "Showtime",
             flex: 3,
+            minWidth: 220
         },
         {
             field: "action",
@@ -125,6 +129,7 @@ const MovieList = () => {
             description: "Do more action with this",
             sortable: false,
             flex: 1,
+            minWidth: 80,
             renderCell: (params) => {
                 return (
                     <MoreMenu items={actions} placement='bottom-end' onChange={({ action }) => { handleSelect(action, params.row.maPhim) }}>
@@ -147,7 +152,7 @@ const MovieList = () => {
         <div className={styles.wrapper}>
             <header className={styles.header}>
                 <h2>Movies</h2>
-                <div className={styles.control}>
+                <div className={styles.controlWrapper}>
                     <SearchBar
                         outline
                         placeholder="Find movie"
@@ -155,16 +160,18 @@ const MovieList = () => {
                         onChange={(e) => setSearchParams({ tenPhim: e.target.value })}
                         onClearValue={() => setSearchParams()}
                     />
-                    <Button
-                        to='/admin/movies/new'
-                        solid
-                        leftIcon={<AddOutlinedIcon />}
-                    >
-                        Add Movie
-                    </Button>
-                    <MoreMenu items={menu} placement='bottom-end'>
-                        <MoreVertOutlinedIcon fontSize='inherit' />
-                    </MoreMenu>
+                    <div className={styles.control}>
+                        <Button
+                            to='/admin/movies/new'
+                            solid
+                            leftIcon={<AddOutlinedIcon />}
+                        >
+                            Add Movie
+                        </Button>
+                        <MoreMenu items={menu} placement='bottom-end'>
+                            <MoreVertOutlinedIcon fontSize='inherit' />
+                        </MoreMenu>
+                    </div>
                 </div>
             </header>
             <TableData

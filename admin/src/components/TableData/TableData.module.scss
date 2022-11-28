@@ -8,8 +8,9 @@
         color: var(--text-color);
 
         &::-webkit-scrollbar-thumb {
-            display: none;
+            // display: none;
         }
+
     }
 
     .row {
