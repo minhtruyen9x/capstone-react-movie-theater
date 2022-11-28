@@ -128,6 +128,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 12px;
+  color: red;
 }
 
 .header-mobile .logo-mobile {
@@ -162,10 +163,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin: 0 12px 30px;
   padding-bottom: 20px;
-  margin-left: 12px;
-  border-bottom: 1px dotted #000;
+  border-bottom: 1px solid #ccc;
 }
 
 .header-mobile .auth-mobile .btn-mobile {
@@ -173,18 +173,20 @@
 }
 
 .header-mobile .auth-mobile .btn-mobile a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
   text-decoration: none;
   padding-left: 10px;
   line-height: 0;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 18px;
   color: #0f0f0f;
-  opacity: 1;
-  transition: all 0.3s;
 }
 
 .header-mobile .auth-mobile .btn-mobile a:hover {
-  opacity: 0.8;
-  /* color: rgb(218, 11, 11); */
+  color: rgb(218, 11, 11);
 }
 
 .header-mobile .menu-mobile {
@@ -200,12 +202,12 @@
   align-items: center;
   text-decoration: none;
   font-size: 16px;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 
 .header-mobile .menu-mobile a:hover {
   background-color: #ccc;
-  color: #0f0f0f;
+  color: #fb4226;
 }
 
 .ant-dropdown {

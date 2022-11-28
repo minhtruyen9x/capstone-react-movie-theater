@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 
-import { UserOutlined } from "@ant-design/icons"
 import { DownOutlined } from "@ant-design/icons"
 import { Avatar, Dropdown } from "antd"
 import { Twirl as Hamburger } from 'hamburger-react';
@@ -206,13 +205,11 @@ const Header = () => {
                 ) : (
                     <div className="auth-mobile">
                         <div className="btn-mobile">
-                            <Avatar icon={<UserOutlined />} />
                             <Link to="/login" className="signin-mobile">
                                 Đăng Nhập
                             </Link>
                         </div>
                         <div className="btn-mobile">
-                            <Avatar icon={<UserOutlined />} />
                             <Link to="/register" className="register-mobile">
                                 Đăng Ký
                             </Link>

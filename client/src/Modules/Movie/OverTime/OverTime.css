@@ -40,7 +40,7 @@
   display: none;
 }
 
-.OverView .OverView-flim .OverView-title .OverView-info {
+.OverView .OverView-info {
   align-self: flex-start;
   position: relative;
   display: flex;
@@ -52,7 +52,11 @@
   flex: 1;
 }
 
-.OverView .OverView-flim .OverView-title .OverView-info .OverView-showing {
+.OverView .OverView-info.OverView-info-mobile {
+  display: none;
+}
+
+.OverView .OverView-info .OverView-showing {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -64,7 +68,7 @@
   border-radius: 5px;
 }
 
-.OverView .OverView-flim .OverView-title .OverView-info .OverView-coming-soon {
+.OverView .OverView-info .OverView-coming-soon {
   display: inline-block;
   position: absolute;
   top: 16px;
@@ -78,44 +82,44 @@
   margin-bottom: 12px;
 }
 
-.OverView .OverView-flim .OverView-title .OverView-info .OverView-time {
+.OverView .OverView-info .OverView-time {
   color: white;
   margin: 0;
 }
 
-.OverView .OverView-flim .OverView-title .OverView-info .OverView-name {
+.OverView .OverView-info .OverView-name {
   font-size: 25px;
   color: rgb(255, 64, 0);
 }
 
-.OverView .OverView-flim .OverView-title .OverView-info .OverView-scroll {
+.OverView .OverView-info .OverView-scroll {
   margin-top: 15px;
   padding-right: 10px;
   overflow-y: scroll;
 }
 
-.OverView .OverView-flim .OverView-title .OverView-info .OverView-srcoll::-webkit-scrollbar-track {
+.OverView .OverView-info .OverView-srcoll::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: transparent;
 }
 
-.OverView .OverView-flim .OverView-title .OverView-info .OverView-scroll::-webkit-scrollbar {
+.OverView .OverView-info .OverView-scroll::-webkit-scrollbar {
   width: 10px;
   background-color: transparent;
 }
 
-.OverView .OverView-flim .OverView-title .OverView-info .OverView-scroll::-webkit-scrollbar-thumb {
+.OverView .OverView-info .OverView-scroll::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: rgb(243, 255, 255);
   display: none;
 }
 
-.OverView .OverView-flim .OverView-title .OverView-info,
+.OverView .OverView-info,
 .OverView-scroll:hover::-webkit-scrollbar-thumb {
   /* display: block; */
 }
 
-.OverView .OverView-flim .OverView-title .OverView-info .OverView-scroll .OverView-sub {
+.OverView .OverView-info .OverView-scroll .OverView-sub {
   color: rgb(238, 228, 228);
   text-align: justify;
   font-weight: 500;
@@ -138,7 +142,7 @@
   cursor: pointer;
 }
 
-.OverView .OverView-flim .OverView-title .OverView-info .OverView-scroll,
+.OverView .OverView-info .OverView-scroll,
 .OverView-ticket:hover {
   /* background-color: #b42a14; */
   color: white;
@@ -176,6 +180,14 @@
   display: none;
 }
 
+.OverView-video-wrapper {
+  display: none;
+}
+
+.OverViewPlayer-button {
+  display: none;
+}
+
 @media screen and (max-width: 1200px) {
   .OverView .OverView-flim {
     /* margin: 0 50px; */
@@ -190,7 +202,7 @@
     height: 320px; */
   /* }  */
 
-  .OverView .OverView-flim .OverView-title .OverView-info,
+  .OverView .OverView-info,
   .OverView-scroll::-webkit-scrollbar-thumb {
     /* display: block; */
   }
@@ -201,28 +213,27 @@
 }
 
 @media screen and (max-width: 992px) {
-  .OverView .OverView-flim .OverView-title .OverView-info .OverView-showing {
+  .OverView .OverView-info .OverView-showing {
     font-size: 15px;
   }
 
-  .OverView .OverView-flim .OverView-title .OverView-info,
   .OverView-coming-soon {
     font-size: 15px;
   }
 
-  .OverView .OverView-flim .OverView-title .OverView-info .OverView-name {
+  .OverView .OverView-info .OverView-name {
     font-size: 20px;
     font-weight: 400;
   }
 
-  .OverView .OverView-flim .OverView-title .OverView-info .OverView-scroll .OverView-sub {
+  .OverView .OverView-info .OverView-scroll .OverView-sub {
     line-height: 1.6em;
     font-size: 15px;
     font-weight: 400;
     max-width: 80%;
   }
 
-  .OverView .OverView-flim .OverView-title .OverView-info .OverView-ticket {
+  .OverView .OverView-info .OverView-ticket {
     padding: 5px 30px;
     font-size: 18px;
     font-weight: 500;
@@ -238,33 +249,109 @@
 }
 
 @media screen and (max-width: 768px) {
+  .OverView .OverView-backgroud {
+    /* height: 80vw; */
+  }
+
   .OverView .OverView-flim {
     flex-wrap: wrap;
+    width: 100%;
+    height: 41vw;
+    top: 0;
+    left: unset;
+    transform: unset;
+    background: linear-gradient(to top, rgb(10, 32, 41), transparent 100%);
   }
 
   .OverView .OverView-flim .OverView-title {
     flex-direction: column;
+    height: 100%;
+    overflow: hidden;
   }
 
-  /* .OverView .OverView-flim .OverView-title .OverView-imgs img {
-    width: 150px;
-    height: 200px;
-  } */
-
-  .OverView .OverView-flim .OverView-title .OverView-info {
-    margin-top: 20px;
-    margin-left: 0;
+  .OverView .OverView-flim .OverView-title::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgb(29, 29, 29), transparent 100%);
   }
 
-  .OverView .OverView-flim .OverView-title .OverView-info .OverView-scroll .OverView-sub {
+  .OverView .OverView-backgroud {
+    filter: none;
+  }
+
+  .OverView .OverView-flim .OverView-title .OverView-imgs {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top, rgb(10, 32, 41), transparent 100%);
+    /* position: absolute; */
+  }
+
+  .OverView .OverView-flim .OverView-title .OverView-imgs img {
+    object-fit: cover;
+  }
+
+  .OverView .OverView-info .OverView-coming-soon {
+    right: 32px;
+    top: 20px;
+    margin: 0;
+  }
+
+  .OverView .OverView-flim .OverView-rating {
+    display: none;
+  }
+
+  .OverView .OverView-info {
+    display: none;
+  }
+
+  .OverView .OverView-info .OverView-scroll .OverView-sub {
+    max-height: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .OverView .OverView-info.OverView-info-mobile {
+    display: block;
+    padding: 20px 24px;
+  }
+
+  .OverView .OverView-info .OverView-scroll .OverView-sub {
     /* height: 100px; */
   }
 
-  .OverView .OverView-flim .OverView-title .OverView-info .OverView-ticket {
+  .OverView .OverView-info .OverView-ticket {
+    display: none;
     margin-top: 20px;
     padding: 5px 20px;
     font-size: 16px;
     font-weight: 700;
+  }
+
+  .OverViewPlayer-button {
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+
+  .OverViewPlayer-button:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .OverView-video-wrapper.OverView-video-active {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 41vw;
   }
 }
 
@@ -275,12 +362,11 @@
 
   .OverView .OverView-flim .OverView-title {
     flex-direction: row;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
   }
 
-  .OverView .OverView-flim .OverView-title .OverView-info {
+  .OverView .OverView-info {
     margin-top: 0;
-    margin-left: 20px;
   }
 
   .OverView .OverView-flim .OverView-rating .OverView-progress {
@@ -308,20 +394,20 @@
     font-size: 12px;
   }
 
-  .OverView .OverView-flim .OverView-title .OverView-info .OverView-showing {
+  .OverView .OverView-info .OverView-showing {
     font-size: 12px;
   }
 
-  .OverView .OverView-flim .OverView-title .OverView-info .OverView-coming-soon {
+  .OverView .OverView-info .OverView-coming-soon {
     font-size: 12px;
   }
 
-  .OverView .OverView-flim .OverView-title .OverView-info .OverView-name {
+  .OverView .OverView-info .OverView-name {
     font-size: 15px;
     font-weight: 700;
   }
 
-  .OverView .OverView-flim .OverView-title .OverView-info .OverView-scroll .OverView-sub {
+  .OverView .OverView-info .OverView-scroll .OverView-sub {
     font-size: 14px;
     text-align: left;
   }

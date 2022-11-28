@@ -27,7 +27,7 @@ const ShowTime = ({ movieId }) => {
   const { Panel } = Collapse;
 
   const onChange = (key) => {
-    console.log(key);
+    // console.log(key);
   };
 
   const items = movieDetails?.heThongRapChieu.map((cinemaSystem, index) => {

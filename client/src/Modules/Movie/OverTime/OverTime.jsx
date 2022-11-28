@@ -1,7 +1,9 @@
-import React from 'react'
 import { Rate, Progress } from 'antd'
+import React, { useRef, useState } from 'react'
 
 import Paragraph from "../../../Components/Paragraph"
+import ReactPlayer from 'react-player/lazy'
+import { BiMoviePlay } from 'react-icons/bi'
 
 import useRequest from "../../../Hook/useRequest"
 import movieAPI from "../../../Services/movieAPI"
@@ -10,6 +12,15 @@ import "./OverTime.css"
 
 const OverTime = ({ movieId }) => {
     const { data: movie } = useRequest(() => movieAPI.getMovieDetails(movieId))
+
+    const [isMute, setIsMute] = useState(false)
+    const [activeVideo, setAvtiveVideo] = useState(false)
+    const playerRef = useRef(null)
+    const handlePlayVideo = () => {
+        setAvtiveVideo(true)
+        playerRef.current.play()
+    }
+
     if (!movie) {
         return null
     }
@@ -83,6 +94,38 @@ const OverTime = ({ movieId }) => {
                         </div>
                     </div>
                 </div>
+                <div
+                    className="OverViewPlayer-button"
+                    onClick={() => setAvtiveVideo(true)}
+                >
+                    <BiMoviePlay />
+                </div>
+            </div>
+            <div className='OverView-info OverView-info-mobile'>
+                {movie?.dangChieu ? (
+                    <span className="OverView-showing">Đang Chiếu</span>
+                ) : movie?.sapChieu ? (
+                    <span className="OverView-coming-soon">Sắp Chiếu</span>
+                ) : null}
+                <p className='OverView-time'>{movie?.ngayKhoiChieu.split("T")[0].replaceAll('-', ".")}</p>
+                <h3 className="OverView-name">{movie.tenPhim}</h3>
+                <div className="OverView-scroll">
+                    <Paragraph className="OverView-sub" maxCharacters={120}>{movie.moTa}</Paragraph>
+                </div>
+                <a href="#showtime" className="OverView-ticket">
+                    Mua Vé
+                </a>
+            </div>
+            <div className={`OverView-video-wrapper ${activeVideo ? "OverView-video-active" : ""}`}>
+                <ReactPlayer
+                    loop={true}
+                    ref={playerRef}
+                    width="100%"
+                    height="100%"
+                    volume={1}
+                    muted={isMute}
+                    url={movie.trailer}
+                    className="trailers" />
             </div>
         </div>
     )

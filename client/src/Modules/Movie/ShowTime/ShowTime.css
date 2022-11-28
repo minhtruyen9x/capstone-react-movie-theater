@@ -119,9 +119,11 @@
   display: none;
 }
 
+
 @media screen and (max-width: 992px) {
   .showtime {
     max-width: 800px;
+    margin: 0;
   }
 
   .showtime .ant-tabs-nav .showtime-cinema {
@@ -156,6 +158,11 @@
     align-items: center;
   }
 
+  .showtime .showtime-mobile .showtime-cinema-mobile {
+    display: flex;
+    align-items: center;
+  }
+
   .showtime .showtime-mobile .showtime-name-cinema,
   .showtime-name-cinema-mobile p {
     margin-bottom: 0;
@@ -171,15 +178,19 @@
   }
 
   .showtime .showtime-mobile .showtime-scroll-mobile .showtime-complex-mobile {
-    margin: 20px 0;
+    /* margin: 20px 0; */
   }
 
   .showtime .showtime-mobile .showtime-scroll-mobile .showtime-complex-mobile,
   .showtime-name-mobile {
     font-size: 16px;
-    color: rgb(231, 251, 12);
+    color: green;
     text-align: left;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+  }
+
+  .showtime .showtime-mobile .showtime-scroll-mobile .showtime-complex-mobile+.showtime-complex-mobile {
+    margin-top: 20px;
   }
 
   .showtime .showtime-mobile .showtime-scroll-mobile .showtime-complex-mobile .showtime-date-mobile button {
@@ -187,10 +198,17 @@
     padding: 5px;
     border: none;
     border-radius: 4px;
-    background: rgb(247, 26, 6);
+    background: white;
+    border: 1px solid #ccc;
     color: rgb(15, 14, 14);
+    background-color: rgba(246, 246, 246, .5);
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  .showtime .showtime-mobile .showtime-scroll-mobile .showtime-complex-mobile .showtime-date-mobile button:hover {
+    background-color: rgba(246, 246, 246, .9);
   }
 
   .showtime .ant-collapse>.ant-collapse-item>.ant-collapse-header {
