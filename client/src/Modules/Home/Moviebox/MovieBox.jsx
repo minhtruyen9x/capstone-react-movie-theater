@@ -106,13 +106,14 @@ const MovieBox = () => {
                         return (
                             <Panel
                                 header={
-                                    <div>
+                                    <div className='cinema-system-header-mobile'>
                                         <img
                                             width={40}
                                             height={40}
                                             src={cinemaSystem.logo}
                                             alt={cinemaSystem.tenHeThongRap}
                                         />
+                                        <p>{cinemaSystem.tenHeThongRap}</p>
                                     </div>
                                 }
                                 key={index + 1}
@@ -142,7 +143,7 @@ const MovieBox = () => {
                                                         return (
                                                             <div
                                                                 key={filmIndex}
-                                                                className="d-flex align-items-center mb-3"
+                                                                className=""
                                                             >
                                                                 <div>
                                                                     <img

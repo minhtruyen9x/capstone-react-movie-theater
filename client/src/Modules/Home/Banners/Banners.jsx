@@ -36,7 +36,7 @@ const Banners = () => {
                 <VscUnmute className='btnVolume'
                     onClick={() => setIsMute(prev => !prev)} />
             )}
-            
+
         </div>
 
     )

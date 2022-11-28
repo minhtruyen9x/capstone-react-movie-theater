@@ -91,9 +91,9 @@ const Showing = () => {
                     onClick={() => handleOpen(item.trailer)}>
                     <AiOutlinePlayCircle />
                   </button>
+                  {item.hot && <span className="movie_sub">HOT</span>}
                 </div>
                 <h2>
-                  {item.hot && <span className="movie_sub">HOT</span>}
                   {item.tenPhim}
                 </h2>
                 <button className="showing_btn_movie"

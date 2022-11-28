@@ -138,6 +138,7 @@
 .cinemax .cinemax_box .cine-flim .cine-title {
   position: relative;
   width: 100%;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -330,7 +331,7 @@
 
 @media screen and (max-width: 576px) {
   .cinemax {
-    margin: 0 10px 50px;
+    margin: 50px 10px 50px;
   }
 
   .cinemax .cinemax_box {
@@ -341,6 +342,18 @@
     display: block;
     height: auto;
     background: #000;
+  }
+
+  .cinema-system-header-mobile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cinema-system-header-mobile p {
+    margin: 0;
+    font-size: 20px;
+    /* text-transform: uppercase; */
   }
 
   .cinemax .cinema-system-mobile .ant-collapse>.ant-collapse-item>.ant-collapse-header {

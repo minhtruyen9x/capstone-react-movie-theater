@@ -18,6 +18,7 @@
   top: max(20%, 70px);
   left: 5%;
   max-width: 70%;
+  pointer-events: none;
 }
 
 
@@ -65,7 +66,7 @@
 }
 
 @media screen and (max-width:480px) {
-  .intro .banners .overview{
+  .intro .banners .overview {
     display: none;
   }
 }
@@ -107,4 +108,3 @@
   }
 
 }
-
